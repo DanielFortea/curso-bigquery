@@ -1,7 +1,7 @@
 variable "project_id" {
   type        = string
   description = "El ID del proyecto de Google Cloud"
-  default     = "curso-gcp-bigquery"
+  default     = "curso-bigquery-508511"
 }
 
 variable "region" {
