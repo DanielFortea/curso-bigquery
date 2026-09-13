@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: ecommerce
+    database: curso-gcp-dbt
+    schema: raw_ecommerce
+    tables:
+      - name: customers
+      - name: orders
+      - name: payments

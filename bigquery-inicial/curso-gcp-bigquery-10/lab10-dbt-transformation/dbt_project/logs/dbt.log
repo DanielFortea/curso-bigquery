@@ -1,0 +1,259 @@
+[0m17:01:56.402483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f130eab5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f12faf4220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f12faf41f0>]}
+
+
+============================== 17:01:56.406258 | 6bb9804d-a391-4319-8dcf-644062e67a95 ==============================
+[0m17:01:56.406258 [info ] [MainThread]: Running with dbt=1.11.12
+[0m17:01:56.407649 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt run', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_path': '/mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/logs', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'debug': 'False', 'no_print': 'None', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'write_json': 'True', 'quiet': 'False'}
+[0m17:01:57.789973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f12faf4df0>]}
+[0m17:01:57.861038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f12fc7bca0>]}
+[0m17:01:57.862812 [info ] [MainThread]: Registered adapter: bigquery=1.11.3
+[0m17:01:57.957836 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m17:01:57.960783 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:01:57.961734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0f636d8a0>]}
+[0m17:01:59.862440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0bf9bdb10>]}
+[0m17:01:59.980410 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/manifest.json
+[0m17:01:59.985597 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/semantic_manifest.json
+[0m17:01:59.997351 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0bf80cc10>]}
+[0m17:01:59.998493 [info ] [MainThread]: Found 2 models, 2 data tests, 1 source, 553 macros
+[0m17:01:59.999540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0bf80c610>]}
+[0m17:02:00.001840 [info ] [MainThread]: 
+[0m17:02:00.002947 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:02:00.004004 [info ] [MainThread]: 
+[0m17:02:00.005249 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:02:00.010720 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_curso-gcp-bigquery'
+[0m17:02:00.012131 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:02:01.368375 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_curso-gcp-bigquery, now create_curso-gcp-bigquery_lab10_analytics)
+[0m17:02:01.369625 [debug] [ThreadPool]: Creating schema "database: "curso-gcp-bigquery"
+schema: "lab10_analytics"
+"
+[0m17:02:01.377982 [debug] [ThreadPool]: On create_curso-gcp-bigquery_lab10_analytics: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "dbt_project_profile", "target_name": "dev", "connection_name": "create_curso-gcp-bigquery_lab10_analytics"} */
+create schema if not exists `curso-gcp-bigquery`.`lab10_analytics`
+  
+[0m17:02:01.379229 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:02:02.030291 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=curso-gcp-bigquery&j=bq:US:89c82fdc-fb00-4d55-af5b-fb01e009b41f&page=queryresults
+[0m17:02:02.911808 [debug] [ThreadPool]: SQL status: OK in 0.880 seconds
+[0m17:02:02.942376 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_curso-gcp-bigquery_lab10_analytics, now list_curso-gcp-bigquery_lab10_analytics)
+[0m17:02:02.943515 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:02:03.419962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0f66f1ff0>]}
+[0m17:02:03.421626 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:02:03.426972 [debug] [Thread-1 (]: Began running node model.dbt_project_profile.stg_raw_orders
+[0m17:02:03.428136 [info ] [Thread-1 (]: 1 of 2 START sql view model lab10_analytics.stg_raw_orders ..................... [RUN]
+[0m17:02:03.429162 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_curso-gcp-bigquery_lab10_analytics, now model.dbt_project_profile.stg_raw_orders)
+[0m17:02:03.430029 [debug] [Thread-1 (]: Began compiling node model.dbt_project_profile.stg_raw_orders
+[0m17:02:03.437776 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project_profile.stg_raw_orders"
+[0m17:02:03.453444 [debug] [Thread-1 (]: Began executing node model.dbt_project_profile.stg_raw_orders
+[0m17:02:03.473926 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project_profile.stg_raw_orders"
+[0m17:02:03.488694 [debug] [Thread-1 (]: On model.dbt_project_profile.stg_raw_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "dbt_project_profile", "target_name": "dev", "node_id": "model.dbt_project_profile.stg_raw_orders"} */
+
+
+  create or replace view `curso-gcp-bigquery`.`lab10_analytics`.`stg_raw_orders`
+  OPTIONS()
+  as WITH source AS (
+    SELECT * FROM `curso-gcp-bigquery`.`lab10_raw`.`raw_orders`
+)
+
+SELECT
+    order_id,
+    customer_id,
+    PARSE_DATE('%Y-%m-%d', order_date) AS order_date,
+    amount,
+    COALESCE(status, 'unknown') AS status
+FROM source;
+
+
+[0m17:02:03.489863 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:02:04.406545 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=curso-gcp-bigquery&j=bq:US:3a3345d0-6d04-4f3b-9f1d-be84fd943ecb&page=queryresults
+[0m17:02:05.008982 [debug] [Thread-1 (]: SQL status: OK in 0.601 seconds
+[0m17:02:05.028374 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0f66b6a10>]}
+[0m17:02:05.029758 [info ] [Thread-1 (]: 1 of 2 OK created sql view model lab10_analytics.stg_raw_orders ................ [[32mCREATE VIEW (0 processed)[0m in 1.60s]
+[0m17:02:05.030987 [debug] [Thread-1 (]: Finished running node model.dbt_project_profile.stg_raw_orders
+[0m17:02:05.032485 [debug] [Thread-3 (]: Began running node model.dbt_project_profile.fct_orders_summary
+[0m17:02:05.033728 [info ] [Thread-3 (]: 2 of 2 START sql table model lab10_analytics.fct_orders_summary ................ [RUN]
+[0m17:02:05.034979 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.dbt_project_profile.fct_orders_summary'
+[0m17:02:05.035907 [debug] [Thread-3 (]: Began compiling node model.dbt_project_profile.fct_orders_summary
+[0m17:02:05.039257 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project_profile.fct_orders_summary"
+[0m17:02:05.050980 [debug] [Thread-3 (]: Began executing node model.dbt_project_profile.fct_orders_summary
+[0m17:02:05.080406 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project_profile.fct_orders_summary"
+[0m17:02:05.091121 [debug] [Thread-3 (]: On model.dbt_project_profile.fct_orders_summary: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "dbt_project_profile", "target_name": "dev", "node_id": "model.dbt_project_profile.fct_orders_summary"} */
+
+  
+    
+
+    create or replace table `curso-gcp-bigquery`.`lab10_analytics`.`fct_orders_summary`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      WITH staging AS (
+    SELECT * FROM `curso-gcp-bigquery`.`lab10_analytics`.`stg_raw_orders`
+)
+
+SELECT
+    customer_id,
+    COUNT(order_id) AS total_orders,
+    SUM(CASE WHEN status = 'completed' THEN amount ELSE 0 END) AS total_revenue,
+    SUM(CASE WHEN status = 'returned' THEN amount ELSE 0 END) AS total_returned_amount
+FROM staging
+GROUP BY customer_id
+    );
+  
+[0m17:02:05.092260 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:02:06.189303 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=curso-gcp-bigquery&j=bq:US:3c8bbcfb-1744-4594-b9bf-51f1fce83701&page=queryresults
+[0m17:02:07.883070 [debug] [Thread-3 (]: SQL status: OK in 1.692 seconds
+[0m17:02:08.250802 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6bb9804d-a391-4319-8dcf-644062e67a95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f0bc40f310>]}
+[0m17:02:08.252349 [info ] [Thread-3 (]: 2 of 2 OK created sql table model lab10_analytics.fct_orders_summary ........... [[32mCREATE TABLE (3.0 rows, 195.0 Bytes processed)[0m in 3.22s]
+[0m17:02:08.253536 [debug] [Thread-3 (]: Finished running node model.dbt_project_profile.fct_orders_summary
+[0m17:02:08.255561 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:02:08.256638 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:02:08.257429 [debug] [MainThread]: Connection 'model.dbt_project_profile.stg_raw_orders' was properly closed.
+[0m17:02:08.258213 [debug] [MainThread]: Connection 'model.dbt_project_profile.fct_orders_summary' was properly closed.
+[0m17:02:08.259083 [info ] [MainThread]: 
+[0m17:02:08.260110 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 8.25 seconds (8.25s).
+[0m17:02:08.261693 [debug] [MainThread]: Command end result
+[0m17:02:08.315546 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/manifest.json
+[0m17:02:08.320643 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/semantic_manifest.json
+[0m17:02:08.329327 [debug] [MainThread]: Wrote artifact RunExecutionResult to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/run_results.json
+[0m17:02:08.330405 [info ] [MainThread]: 
+[0m17:02:08.331495 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:02:08.332359 [info ] [MainThread]: 
+[0m17:02:08.333252 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m17:02:08.334337 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.473709, "process_in_blocks": "589197", "process_kernel_time": 1.37308, "process_mem_max_rss": "264704", "process_out_blocks": "0", "process_user_time": 3.812318}
+[0m17:02:08.335268 [debug] [MainThread]: Command `dbt run` succeeded at 17:02:08.335177 after 11.47 seconds
+[0m17:02:08.336164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f130eab5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f12fc7bca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74f12faf41c0>]}
+[0m17:02:08.337094 [debug] [MainThread]: Flushing usage events
+[0m17:02:08.826091 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:02:45.288802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c786c8f550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c7859a0220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c7859a01c0>]}
+
+
+============================== 17:02:45.291650 | 433a7391-e4c2-4e72-afc2-d2ea6211fc16 ==============================
+[0m17:02:45.291650 [info ] [MainThread]: Running with dbt=1.11.12
+[0m17:02:45.292744 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'profiles_dir': '/mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project', 'empty': 'None', 'printer_width': '80', 'log_cache_events': 'False', 'target_path': 'None', 'fail_fast': 'False', 'cache_selected_only': 'False', 'version_check': 'True', 'partial_parse': 'True', 'invocation_command': 'dbt test', 'log_format': 'default', 'quiet': 'False', 'warn_error': 'None', 'static_parser': 'True', 'debug': 'False', 'use_colors': 'True', 'log_path': '/mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/logs', 'introspect': 'True', 'write_json': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m17:02:46.076446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '433a7391-e4c2-4e72-afc2-d2ea6211fc16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c7859a0310>]}
+[0m17:02:46.143906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '433a7391-e4c2-4e72-afc2-d2ea6211fc16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c75079d570>]}
+[0m17:02:46.145327 [info ] [MainThread]: Registered adapter: bigquery=1.11.3
+[0m17:02:46.237063 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m17:02:46.401178 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:02:46.402384 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:02:46.403380 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:02:46.526864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '433a7391-e4c2-4e72-afc2-d2ea6211fc16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c7882c67d0>]}
+[0m17:02:46.643986 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/manifest.json
+[0m17:02:46.649552 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/semantic_manifest.json
+[0m17:02:46.667546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '433a7391-e4c2-4e72-afc2-d2ea6211fc16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c7500fd210>]}
+[0m17:02:46.669002 [info ] [MainThread]: Found 2 models, 2 data tests, 1 source, 553 macros
+[0m17:02:46.670122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '433a7391-e4c2-4e72-afc2-d2ea6211fc16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c786a14460>]}
+[0m17:02:46.672375 [info ] [MainThread]: 
+[0m17:02:46.674255 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:02:46.675277 [info ] [MainThread]: 
+[0m17:02:46.676630 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:02:46.682597 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_curso-gcp-bigquery_lab10_analytics'
+[0m17:02:46.683810 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:02:47.770246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '433a7391-e4c2-4e72-afc2-d2ea6211fc16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c7887b4c10>]}
+[0m17:02:47.771472 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:02:47.775267 [debug] [Thread-1 (]: Began running node test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8
+[0m17:02:47.775579 [debug] [Thread-2 (]: Began running node test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a
+[0m17:02:47.776361 [info ] [Thread-1 (]: 1 of 2 START test not_null_stg_raw_orders_order_id ............................. [RUN]
+[0m17:02:47.777188 [info ] [Thread-2 (]: 2 of 2 START test unique_stg_raw_orders_order_id ............................... [RUN]
+[0m17:02:47.778062 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_curso-gcp-bigquery_lab10_analytics, now test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8)
+[0m17:02:47.779058 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a'
+[0m17:02:47.780142 [debug] [Thread-1 (]: Began compiling node test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8
+[0m17:02:47.781326 [debug] [Thread-2 (]: Began compiling node test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a
+[0m17:02:47.797080 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8"
+[0m17:02:47.803086 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a"
+[0m17:02:47.810349 [debug] [Thread-1 (]: Began executing node test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8
+[0m17:02:47.817386 [debug] [Thread-2 (]: Began executing node test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a
+[0m17:02:47.828876 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8"
+[0m17:02:47.831384 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a"
+[0m17:02:47.838867 [debug] [Thread-1 (]: On test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "dbt_project_profile", "target_name": "dev", "node_id": "test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from `curso-gcp-bigquery`.`lab10_analytics`.`stg_raw_orders`
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:02:47.840058 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:02:47.840536 [debug] [Thread-2 (]: On test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "dbt_project_profile", "target_name": "dev", "node_id": "test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select order_id as unique_field
+  from `curso-gcp-bigquery`.`lab10_analytics`.`stg_raw_orders`
+  where order_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:02:47.843246 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:02:48.732123 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=curso-gcp-bigquery&j=bq:US:7d342172-9415-49a7-97ac-5775b84e7920&page=queryresults
+[0m17:02:48.920882 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=curso-gcp-bigquery&j=bq:US:4f46c7a4-0723-44c9-8da1-2d5990b4a33c&page=queryresults
+[0m17:02:49.049881 [debug] [Thread-1 (]: SQL status: OK in 0.316 seconds
+[0m17:02:49.240269 [debug] [Thread-2 (]: SQL status: OK in 0.318 seconds
+[0m17:02:49.660173 [info ] [Thread-1 (]: 1 of 2 PASS not_null_stg_raw_orders_order_id ................................... [[32mPASS[0m in 1.88s]
+[0m17:02:49.661645 [debug] [Thread-1 (]: Finished running node test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8
+[0m17:02:49.998000 [info ] [Thread-2 (]: 2 of 2 PASS unique_stg_raw_orders_order_id ..................................... [[32mPASS[0m in 2.22s]
+[0m17:02:49.999466 [debug] [Thread-2 (]: Finished running node test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a
+[0m17:02:50.001394 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:02:50.002485 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:02:50.003285 [debug] [MainThread]: Connection 'test.dbt_project_profile.not_null_stg_raw_orders_order_id.c1e990a4a8' was properly closed.
+[0m17:02:50.004105 [debug] [MainThread]: Connection 'test.dbt_project_profile.unique_stg_raw_orders_order_id.d964d5e84a' was properly closed.
+[0m17:02:50.004940 [info ] [MainThread]: 
+[0m17:02:50.005895 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 3.33 seconds (3.33s).
+[0m17:02:50.007155 [debug] [MainThread]: Command end result
+[0m17:02:50.062161 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/manifest.json
+[0m17:02:50.067393 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/semantic_manifest.json
+[0m17:02:50.076534 [debug] [MainThread]: Wrote artifact RunExecutionResult to /mnt/c/repos/creator-founder/cf-sprint-8/curso-gcp-bigquery/lab10-dbt-transformation/dbt_project/target/run_results.json
+[0m17:02:50.077833 [info ] [MainThread]: 
+[0m17:02:50.079006 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:02:50.080000 [info ] [MainThread]: 
+[0m17:02:50.080976 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m17:02:50.082127 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.8652377, "process_in_blocks": "1166", "process_kernel_time": 1.129361, "process_mem_max_rss": "252156", "process_out_blocks": "0", "process_user_time": 2.614718}
+[0m17:02:50.083119 [debug] [MainThread]: Command `dbt test` succeeded at 17:02:50.083030 after 4.87 seconds
+[0m17:02:50.084101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c786c8f550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c7859a0310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73c786a2fdc0>]}
+[0m17:02:50.085053 [debug] [MainThread]: Flushing usage events
+[0m17:02:50.567231 [debug] [MainThread]: An error was encountered while trying to flush usage events

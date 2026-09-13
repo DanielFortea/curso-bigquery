@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: fct_orders
+    description: "Tabla de hechos de pedidos con su importe total."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'returned']

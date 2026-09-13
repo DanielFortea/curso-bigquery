@@ -1,0 +1,10 @@
+sale_id,customer_id,sale_date,amount,product_category
+1,C101,2026-03-01,120.00,Electronics
+2,C102,2026-03-01,45.00,Home
+3,C101,2026-03-02,80.00,Electronics
+4,C103,2026-03-02,15.90,Books
+5,C102,2026-03-02,60.00,Home
+6,C101,2026-03-03,210.00,Electronics
+7,C103,2026-03-03,45.00,Books
+8,C102,2026-03-04,30.00,Home
+9,C104,2026-03-04,150.00,Electronics

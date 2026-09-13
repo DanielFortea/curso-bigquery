@@ -1,0 +1,5 @@
+emp_id,name,email,ssn,salary,region
+1,Alice Johnson,alice@example.com,SSN-999-111,85000.00,US
+2,Bob Smith,bob@example.com,SSN-888-222,92000.00,US
+3,Dieter Müller,dieter@example.com,SSN-777-333,78000.00,EU
+4,Chloe Laurent,chloe@example.com,SSN-666-444,81000.00,EU

@@ -1,0 +1,13 @@
+curso_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('DBT_GOOGLE_PROJECT', 'curso-gcp-dbt') }}"
+      dataset: "{{ env_var('DBT_GOOGLE_DATASET', 'dbt_dev') }}"
+      location: "{{ env_var('DBT_GOOGLE_LOCATION', 'EU') }}"
+      threads: 4
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      priority: interactive
+      retries: 1
