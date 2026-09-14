@@ -5,7 +5,7 @@ terraform {
 }
 
 provider "google" {
-  project = "curso-gcp-dbt"
+  project = "curso-bigquery-508511"
   region  = "europe-southwest1" # Madrid
 }
 
