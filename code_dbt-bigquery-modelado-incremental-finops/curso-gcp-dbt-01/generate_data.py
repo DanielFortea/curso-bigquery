@@ -4,7 +4,7 @@ import random
 from google.cloud import bigquery
 from datetime import datetime, timedelta
 
-project_id = 'curso-gcp-dbt'
+project_id = 'curso-bigquery-508511'
 dataset_id = 'raw_ecommerce'
 client = bigquery.Client(project=project_id)
 fake = Faker()
